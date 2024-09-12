@@ -1,0 +1,12 @@
+.top-bar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+    }
+}
