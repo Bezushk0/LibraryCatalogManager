@@ -1,0 +1,12 @@
+.header {
+    background-color: $main-background-color;
+    height: auto;
+}
+
+.header__content{
+    color: white;
+
+    &-a {
+        color: white;
+    }
+}

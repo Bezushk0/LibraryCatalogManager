@@ -1,0 +1,16 @@
+.header__bottem {
+    display: flex;
+
+    @media (max-width: 1020px) {
+        display: block;
+    }
+}
+
+.header__text {
+    width: 600px;
+    margin: 0 30px 0 54px;
+
+    &-about {
+        margin: 30px 0;
+    }
+}

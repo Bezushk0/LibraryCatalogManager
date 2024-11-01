@@ -1,0 +1,14 @@
+.bottom-bar {
+    height: 500px;
+    box-sizing: border-box;
+    background-image: url('../images/header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    flex-grow: 1;
+
+    @media (max-width: 480px) {
+        background-position: center bottom;
+        background-size: cover; 
+    }
+}

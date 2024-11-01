@@ -1,0 +1,19 @@
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .about-text {
+        flex: 1;
+    }
+
+    .about-image {
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    }
+}

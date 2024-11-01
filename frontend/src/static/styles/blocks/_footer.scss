@@ -1,0 +1,11 @@
+.footer {
+    color: #ffffff;
+    background-color: #3f5252; 
+}
+
+.container {
+    &.footer {
+        display: flex;
+        justify-content: space-around;
+    }
+}

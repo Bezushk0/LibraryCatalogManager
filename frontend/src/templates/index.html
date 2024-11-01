@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя бібліотека</title>
+    <link rel="stylesheet" href="../static/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container content_header">
+            <div class="header__content">
+                <div class="top-bar">
+                    <h1>Бібліотека</h1>
+                    <nav>
+                        <ul class="top-bar__ul">
+                            <li><a class="header__content-a" href="#about">Про нас</a></li>
+                            <li><a class="header__content-a" href="#services">Послуги</a></li>
+                            <li><a class="header__content-a" href="#info">Контакти</a></li>
+                            <li><a class="header__content-a" href="#contact">Вхід/Реєстрація</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__bottem">
+                    <div class="header__text">
+                        <h1 class="header__text-about">Система обліку книг в бібліотеці</h1>
+                        <p>&nbsp;Швидкий доступ до знань! Ми пропонуємо зручну систему пошуку та бронювання книг.
+                            Знайдіть цікаву книгу, забронюйте її та отримайте в бібліотеці або читайте онлайн. Ми завжди
+                            раді допомогти вам у пошуку необхідної літератури.</p>
+                    </div>
+                    <div class="bottom-bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="about" class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../static/images/book.jpg" alt="Зображення книг">
+                </div>
+                <div class="about-text">
+                    <h2>Про нас</h2>
+                    <p>Ми — сучасна бібліотека з великим асортиментом книг для всіх вікових категорій. Наша мета —
+                        забезпечити доступ до знань і літератури для кожного.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="container">
+            <h2 class="title_section2">Послуги</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('../static/images/slide-book1.jpg');">
+                        <p>Взяття книг на абонемент</p>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('../static/images/slide-book2.jpg');">
+                        <p>Доступ до електронних ресурсів</p>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('../static/images/slide-book3.jpg');">
+                        <p>Організація культурних заходів</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="info" class="container">
+            <h2>Контакти</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>Телефон: (123) 456-7890</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: contact@library.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Адреса: вул. Книжкова, 1, Київ</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Години роботи: Пн-Пт 9:00-18:00, Сб-Нд 10:00-16:00</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-comments"></i>
+                    <p>Ми у соціальних мережах: <a href="https://facebook.com" target="_blank">Facebook</a>, <a
+                            href="https://twitter.com" target="_blank">Twitter</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Вхід</h2>
+            
+            <!-- Форма входу -->
+            <form id="authForm" class="form">
+                <div class="flex">
+                    <label for="username">Ім'я користувача:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Увійти</button>
+                    <button type="button" id="register">Зареєструватися</button>
+                </div>
+            </form>
+    
+            <!-- Форма реєстрації, спочатку прихована -->
+            <form id="registerForm" class="form" style="display: none;">
+                <div class="flex">
+                    <label for="new-username">Ім'я користувача:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+                    <label for="new-password">Пароль:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit">Зареєструватися</button>
+                    <button type="button" id="backToLogin">Повернутися до входу</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer">
+            <p>&copy; 2024 Моя бібліотека. Усі права захищені.</p>
+            <p>Бібліотека Безушко Владіслава.</p>
+            <p>Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+
+</body>
+
+</html>
