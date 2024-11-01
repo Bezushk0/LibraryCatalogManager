@@ -5,31 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Користувач - Моя бібліотека</title>
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../static/styles/main.css" />
 </head>
 
-<body>
-    <header class="header">
-        <h1>Система обліку книг - Домашня сторінка користувача</h1>
+<body class="body_user">
+    <header class="header_user">
+        <h1>Домашня сторінка користувача</h1>
         <nav>
-            <ul>
+            <ul class="nav_user">
                 <li><a href="/">Головна</a></li>
-                <li><a href="#my-books">Мої книги</a></li>
-                <li><a href="/logout">Вийти</a></li>
+                <li>
+                    <form action="/logout" method="get" style="display:inline;">
+                        <button style="font-size: 18px;" type="submit">Вийти</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main_user">
         <section id="my-books">
             <h2>Мої книги</h2>
-            <p>Тут ви можете переглядати та бронювати книги.</p>
+            <div class="book-list" id="bookList">
+
+            </div>
         </section>
+
+        <section id="my-profile">
+            <h2>Мій профіль</h2>
+            <p>Ім'я: <span id="profile-name">Ім'я користувача</span></p>
+            <p>Електронна пошта: <span id="profile-email">user@example.com</span></p>
+            <button class="edit-profile-btn">Редагувати профіль</button>
+            <div class="edit-profile-form" style="display:none;">
+                <h3>Редагувати профіль</h3>
+                <form id="profile-form">
+                    <label for="edit-name">Ім'я:</label>
+                    <input type="text" id="edit-name" value="Ім'я користувача" required />
+                    <label for="edit-email">Електронна пошта:</label>
+                    <input type="email" id="edit-email" value="user@example.com" required />
+                    <button type="submit">Зберегти зміни</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <p>&copy; 2024 Моя бібліотека. Сторінка користувача.</p>
     </footer>
+
+    <script src="../static/scripts/profile.js"></script>
+    <script src="../static/scripts/reservation.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,34 @@
+
+
+h1 {
+    text-align: center;
+}
+
+#add-book-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+table {
+    width: 100%;
+    
+    margin-top: 20px;
+}
+
+.table__book {
+    border-radius: 10px;
+    background-color: rgb(199, 199, 199);
+    box-shadow: 5px 5px 5px rgb(121, 115, 115);
+}
+
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}

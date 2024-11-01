@@ -24,9 +24,15 @@
                             <li><a class="header__content-a" href="#about">Про нас</a></li>
                             <li><a class="header__content-a" href="#services">Послуги</a></li>
                             <li><a class="header__content-a" href="#info">Контакти</a></li>
-                            <li><a class="header__content-a" href="#contact">Вхід/Реєстрація</a></li>
+                            {% if username %}
+                            <li id="profile-link"><a class="header__content-a" href="/user_home">Профіль</a></li>
+                            <li><a class="header__content-a" href="/logout">Вихід</a></li>
+                            {% else %}
+                            <li id="login-link"><a class="header__content-a" href="#contact">Вхід/Реєстрація</a></li>
+                            {% endif %}
                         </ul>
                     </nav>
+
                 </div>
                 <div class="header__bottem">
                     <div class="header__text">
@@ -110,7 +116,6 @@
             <span class="close-button">&times;</span>
             <h2 id="modal-title">Вхід</h2>
             
-            <!-- Форма входу -->
             <form id="authForm" class="form">
                 <div class="flex">
                     <label for="username">Ім'я користувача:</label>
@@ -122,7 +127,6 @@
                 </div>
             </form>
     
-            <!-- Форма реєстрації, спочатку прихована -->
             <form id="registerForm" class="form" style="display: none;">
                 <div class="flex">
                     <label for="new-username">Ім'я користувача:</label>
@@ -147,7 +151,7 @@
     </footer>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='scripts/main.js') }}"></script>
 
 </body>
 

@@ -41,40 +41,40 @@
 }
 
 label {
-    font-weight: bold; // Жирний шрифт для міток
-    margin-bottom: 5px; // Відстань між міткою та полем вводу
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input {
-    padding: 12px; // Внутрішні відступи
-    border: 1px solid #ccc; // Оформлення кордону
-    border-radius: 5px; // Закруглення кутів
-    transition: border 0.3s; // Плавний перехід для кордону
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
 
     &:focus {
-        border-color: #34637e; // Зміна кольору кордону при фокусі
-        outline: none; // Сховати стандартний контур
+        border-color: #34637e;
+        outline: none;
     }
 }
 
 button {
     padding: 10px;
-    background-color: #3f5252; // Основний колір кнопки
-    color: white; // Колір тексту
-    border: none; // Без кордону
-    border-radius: 5px; // Закруглення кутів
-    cursor: pointer; // Зміна курсора при наведенні
-    transition: background-color 0.3s; // Плавний перехід кольору фону
+    background-color: #3f5252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
     &:hover {
-        background-color: #5c7575; // Темніший колір при наведенні
+        background-color: #5c7575;
     }
 
     &.register {
-        background-color: #28a745; // Зелений колір для кнопки реєстрації
+        background-color: #28a745;
 
         &:hover {
-            background-color: #218838; // Темніший зелений при наведенні
+            background-color: #218838;
         }
     }
 }

@@ -5,37 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адміністратор - Моя бібліотека</title>
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../static/styles/main.css" />
 </head>
 
-<body>
-    <header class="header">
-        <h1>Система обліку книг - Адміністратор</h1>
+<body class="body_user">
+    <header class="header_user">
+        <h1>Адміністратор</h1>
         <nav>
-            <ul>
+            <ul class="nav_user">
                 <li><a href="/">Головна</a></li>
-                <li><a href="#manage-books">Керування книгами</a></li>
-                <li><a href="#manage-users">Керування користувачами</a></li>
-                <li><a href="/logout">Вийти</a></li>
+                <li>
+                    <form action="/logout" method="get" style="display:inline;">
+                        <button style="font-size: 18px;" type="submit">Вийти</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main_user">
         <section id="manage-books">
             <h2>Керування книгами</h2>
-            <p>Тут адмін може додавати, редагувати або видаляти книги.</p>
+            <form id="add-book-form">
+                <input type="text" id="book-title" placeholder="Назва книги" required />
+                <input type="text" id="book-author" placeholder="Автор книги" required />
+                <input type="text" id="book-isbn" placeholder="ISBN" required />
+                
+                <button type="submit">Додати книгу</button>
+            </form>
+
+            <table id="books-table" class="table__book">
+                <thead>
+                    <tr>
+                        <th>Назва</th>
+                        <th>Автор</th>
+                        <th>Код ISBN</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </section>
 
         <section id="manage-users">
             <h2>Керування користувачами</h2>
-            <p>Адмін може керувати користувачами: призначати ролі, видаляти облікові записи.</p>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Ім'я користувача</th>
+                        <th>Електронна пошта</th>
+                        <th>Роль</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reserved-books">
+            <h2>Заброньовані книги</h2>
+            <div class="book-list" id="reservedBookList">
+            </div>
+        </section>
+
+        <section id="my-profile">
+            <h2>Мій профіль</h2>
+            <p>Ім'я: <span id="profile-name">Ім'я користувача</span></p>
+            <p>Електронна пошта: <span id="profile-email">user@example.com</span></p>
+            <button class="edit-profile-btn">Редагувати профіль</button>
+            <div class="edit-profile-form" style="display:none;">
+                <h3>Редагувати профіль</h3>
+                <form id="profile-form">
+                    <label for="edit-name">Ім'я:</label>
+                    <input type="text" id="edit-name" value="Ім'я користувача" required />
+                    <label for="edit-email">Електронна пошта:</label>
+                    <input type="email" id="edit-email" value="user@example.com" required />
+                    <button type="submit">Зберегти зміни</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Моя бібліотека. Адміністративна сторінка.</p>
     </footer>
+
+    <script src="../static/scripts/profile.js"></script>
+    <script src="../static/scripts/books.js"></script>
+    <script src="../static/scripts/users.js"></script>
+    <script src="../static/scripts/reservation_admin.js"></script>
 </body>
 
 </html>

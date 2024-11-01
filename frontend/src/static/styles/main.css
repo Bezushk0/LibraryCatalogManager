@@ -278,4 +278,145 @@ button.register {
 }
 button.register:hover {
   background-color: #218838;
+}
+
+.body_user {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.header_user {
+  background-color: #3f5252;
+  color: #fff;
+  padding: 1rem;
+}
+.header_user h1 {
+  margin: 0;
+}
+.header_user nav ul {
+  list-style: none;
+  padding: 0;
+}
+.header_user nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+.header_user nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.header_user nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.nav_user {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main_user {
+  flex: 1;
+  padding: 20px;
+}
+.main_user section {
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+.main_user section h2 {
+  margin-top: 0;
+  color: #3f5252;
+}
+.main_user section .book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main_user section .book-list .book-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: calc(33% - 20px);
+}
+.main_user section .book-list .book-item h3 {
+  margin: 0;
+}
+.main_user section .book-list .book-item .reserve-btn {
+  background-color: #3f5252;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.main_user section .book-list .book-item .reserve-btn:hover {
+  background-color: #293535;
+}
+.main_user section .book-list .book-item .reserve-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.main_user section .reservation-list {
+  list-style-type: none;
+  padding: 0;
+}
+.main_user section .edit-profile-btn {
+  background-color: #3f5252;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.main_user section .edit-profile-btn:hover {
+  background-color: #293535;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#add-book-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.table__book {
+  border-radius: 10px;
+  background-color: rgb(199, 199, 199);
+  box-shadow: 5px 5px 5px rgb(121, 115, 115);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
